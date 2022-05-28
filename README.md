@@ -18,7 +18,7 @@ When the user clicks on the red button that says "Generate Password," they are t
 The first conditiion that the user must decide is the length of their password. A window prompt asks the user to choose a password length between 8 and 128:
 ![picture](/Assets/README%20images/password-length-prompt.png)
 
-If the user does not enter a password length that is between the accepted range, a window alerts them that they must choose a length that falls within the accepted range:
+If the user does not enter a password length that is between the accepted range or if the user enters a response that is not a number, a window alert tells them that they must choose a length that falls within the accepted range:
 ![picture](/Assets/README%20images/length-error.png)
 
 Once the use enters a password length within the accepted range, they are taken through the remaining password conditions (below).
