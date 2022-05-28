@@ -16,28 +16,33 @@ var generatePassword = function () {
       return generatePassword();
     } 
 
-    var passwordCharacters = [];
-
     // ask if lowercase characters are desired and add if yes, to compiled password
     var confirmLowerCase = confirm("Would you like your password to include lowercase letters? If yes, click 'OK.' If no, click 'Cancel.'");
-    if (confirmLowerCase) {
-      passwordCharacters = passwordCharacters.concat(lowerCase);
-    }
 
     //ask if uppercase characters are desired and if yes, add to compiled password
     var confirmUpperCase = confirm("Would you like your password to include uppercase letters? If yes, click 'OK.' If no, click 'Cancel.'");  
-    if (confirmUpperCase) {
-      passwordCharacters = passwordCharacters.concat(upperCase);
-    }
-
+    
     // ask if numbers are desired and if yes, add to compiled password
     var confirmNumericCharacters = confirm("Would you like your password to include numbers? If yes, click 'OK.' If no, click 'Cancel.'");
-    passwordCharacters = passwordCharacters.concat(numericCharacters);
 
     // ask if special characters are desired and if yes, add to compiled password
     var confirmSpecialCharacters = confirm("Would you like your password to include special characters? If yes, click 'OK.' If no, click 'Cancel.'");
-    passwordCharacters = passwordCharacters.concat(specialCharacters);
-  
+    
+    // concatentate password
+    var passwordCharacters = [];
+    if (confirmLowerCase) {
+      passwordCharacters = passwordCharacters.concat(lowerCase);
+    }
+    if (confirmUpperCase) {
+      passwordCharacters = passwordCharacters.concat(upperCase);
+    }
+    if (confirmNumericCharacters) {
+      passwordCharacters = passwordCharacters.concat(numericCharacters);
+    }
+    if (confirmSpecialCharacters) {
+      passwordCharacters = passwordCharacters.concat(specialCharacters);
+    }
+    
     // compile password    
     var compiledPassword = [];
     for(var i = 0; i < passwordLength; i++) {
