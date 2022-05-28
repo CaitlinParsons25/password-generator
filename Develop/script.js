@@ -15,6 +15,12 @@ var generatePassword = function () {
       window.alert("You must choose a length between 8 and 128 characters");
       return generatePassword();
     } 
+   if ((isNaN(passwordLength))){
+    window.alert("You must choose a length between 8 and 128 characters");
+    return generatePassword();
+   }
+    
+    
 
     // ask if lowercase characters are desired and add if yes, to compiled password
     var confirmLowerCase = confirm("Would you like your password to include lowercase letters? If yes, click 'OK.' If no, click 'Cancel.'");
